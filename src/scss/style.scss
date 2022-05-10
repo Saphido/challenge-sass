@@ -1,0 +1,146 @@
+@import "variables.scss";
+
+@mixin box-shadow($color) {
+    box-shadow: 10px 10px 15px -4px $color;
+}
+
+@for $i from 1 through 6 {
+    .adv-item:nth-child(6n + #{$i}) {
+      background-color: lighten($green, $i * 5%);
+    }
+  }
+
+body {
+    font: 100% "Space Mono", monospace;
+    color: $mid_gray;
+    margin: 0;
+    padding: 0;
+    background-color: $white;
+    overflow-x: hidden;
+}
+
+main {
+    padding: 0 1em;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article 
+{ 
+            section 
+            {
+                flex-grow: 1;
+                flex-basis: 45%;
+                border: 1px $light_gray solid;
+                @include box-shadow($black);
+                padding: $general-pad;
+                margin: 16px;
+                clear: both;
+                overflow: auto;
+                box-sizing: border-box;
+            }
+}
+
+article 
+{
+        section
+        &#selling-points 
+        {
+            flex-grow: 2;
+            flex-basis: 100%;
+        }
+}
+
+article 
+{ 
+        code 
+        {
+            background: $black;
+            border: 1px solid $mid_gray;
+            color: $light_gray;
+            page-break-inside: avoid;
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 1.6em;
+            max-width: 100%;
+            overflow: auto;
+            padding: 1em 1.5em;
+            display: block;
+            word-wrap: break-word;
+        }
+}
+
+article 
+ { 
+        code.before 
+        {
+            float: left;
+            width: 40%;
+        }
+}
+
+article 
+{
+        code.after 
+        {
+            float: right;
+            width: 40%;
+        }
+}
+
+h1,
+h2,
+h3 {
+    color: $pink;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 32px;
+    margin-bottom: 0px;
+}
+
+footer {
+    h3 {
+        padding: ($general-pad * 2);
+    }
+}
+
+%messages {
+    padding: $general-pad;
+}
+
+.success,
+.error,
+.warning {
+    border: 1px solid $light_gray;
+    padding: $general-pad;
+    color: $white;
+}
+
+.success {
+    background-color: $green;
+    @extend %messages;
+}
+
+.error {
+    background-color: $red;
+    @extend %messages;
+        &:hover {
+            background-color: $green;
+        }
+}
+
+.warning {
+    background-color: $orange;
+    @extend %messages;
+}
