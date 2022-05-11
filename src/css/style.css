@@ -1,25 +1,49 @@
-.adv-item:nth-child(6n+1) {
+.adv-item:nth-child(2n) {
   background-color: #009a00;
 }
 
-.adv-item:nth-child(6n+2) {
+.adv-item:nth-child(2n) {
   background-color: #00b300;
 }
 
-.adv-item:nth-child(6n+3) {
+.adv-item:nth-child(2n) {
   background-color: #00cd00;
 }
 
-.adv-item:nth-child(6n+4) {
+.adv-item:nth-child(2n) {
   background-color: #00e600;
 }
 
-.adv-item:nth-child(6n+5) {
+.adv-item:nth-child(2n) {
   background-color: #01ff01;
 }
 
-.adv-item:nth-child(6n+6) {
+.adv-item:nth-child(2n) {
   background-color: #1aff1a;
+}
+
+.adv-item:nth-child(2n+1) {
+  background-color: #ff1a1a;
+}
+
+.adv-item:nth-child(2n+1) {
+  background-color: #ff3333;
+}
+
+.adv-item:nth-child(2n+1) {
+  background-color: #ff4d4d;
+}
+
+.adv-item:nth-child(2n+1) {
+  background-color: #ff6666;
+}
+
+.adv-item:nth-child(2n+1) {
+  background-color: #ff8080;
+}
+
+.adv-item:nth-child(2n+1) {
+  background-color: #ff9999;
 }
 
 body {
