@@ -1,0 +1,5 @@
+@for $i from 1 through 6 {
+    .adv-item:nth-child(6n + #{$i}) {
+      background-color: lighten($green, $i * 5%);
+    }
+  }

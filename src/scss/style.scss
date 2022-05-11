@@ -1,14 +1,6 @@
 @import "variables.scss";
-
-@mixin box-shadow($color) {
-    box-shadow: 10px 10px 15px -4px $color;
-}
-
-@for $i from 1 through 6 {
-    .adv-item:nth-child(6n + #{$i}) {
-      background-color: lighten($green, $i * 5%);
-    }
-  }
+@import "mixins.scss";
+@import "loops.scss";
 
 body {
     font: 100% "Space Mono", monospace;
